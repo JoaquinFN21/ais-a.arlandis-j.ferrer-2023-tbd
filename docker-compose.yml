@@ -1,0 +1,5 @@
+services:
+  books-reviewer:
+    image:${{secrets.DOCKERHUB_USERNAME }}/ais-j.ferrer-a.arlandis-2023:${{ github.sha }}
+    ports:
+      - 8080:8080

@@ -1,6 +1,6 @@
 services:
   books-reviewer:
-    image: repo2001/ais-j.ferrer-a.arlandis-2023:${{ steps.project.outputs.hash }}
+    image: repo2001/ais-j.ferrer-a.arlandis-2023:${ COMMIT_HASH }
     ports:
      - 8080:8080
 

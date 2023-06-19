@@ -17,7 +17,10 @@ jobs:
         run: mvn test
       - name: Generate tag
         run: echo "hash=${{ github.sha }}" >> $GITHUB_OUTPUT
-        id: hash
+        id: hashtag
+      - name: Generate Hash Variable
+        env: 
+          COMMIT_HASH: ${{ steps.hashtag.outputs.hash }}
       - name: Generate Docker image
         run: mvn spring-boot:build-image -DskipTests -Dspring-boot.build-image.imageName=${{ secrets.DOCKERHUB_USERNAME }}/ais-j.ferrer-a.arlandis-2023:${{ github.sha }}
       - name: Login to DockerHub

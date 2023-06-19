@@ -18,7 +18,6 @@ jobs:
       - name: Generate tag
         run: echo "hash=${{ github.sha }}" >> $GITHUB_OUTPUT
         id: hashtag
-      - name: Generate Hash Variable
         env: 
           COMMIT_HASH: ${{ steps.hashtag.outputs.hash }}
       - name: Generate Docker image

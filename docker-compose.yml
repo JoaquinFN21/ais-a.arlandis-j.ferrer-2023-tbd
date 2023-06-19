@@ -1,4 +1,5 @@
 services:
   books-reviewer:
+  image: repo2001/ais-j.ferrer-a.arlandis-2023:*
     ports:
       - 8080:8080

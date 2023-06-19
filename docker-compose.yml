@@ -1,5 +1,4 @@
 services:
   books-reviewer:
-    image:repo2001/ais-j.ferrer-a.arlandis-2023:3b41a7d6ab29774163280ab824ef26fef77e5d22
     ports:
       - 8080:8080

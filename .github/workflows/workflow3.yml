@@ -21,11 +21,11 @@ jobs:
       - name: Generate Docker image
         env: 
           COMMIT_HASH: ${{ steps.hashtag.outputs.hash }}
-        run: mvn spring-boot:build-image -DskipTests -Dspring-boot.build-image.imageName=${{ secrets.DOCKERHUB_USERNAME }}/ais-j.ferrer-a.arlandis-2023:${ COMMIT_HASH }
+        run: mvn spring-boot:build-image -DskipTests -Dspring-boot.build-image.imageName=${{ secrets.DOCKERHUB_USERNAME }}/ais-j.ferrer-a.arlandis-2023:$COMMIT_HASH
       - name: Login to DockerHub
         run: docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" -p "${{ secrets.DOCKERHUB_TOKEN }}" 
       - name: Push image to DockerHub
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/ais-j.ferrer-a.arlandis-2023:${ COMMIT_HASH }
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/ais-j.ferrer-a.arlandis-2023:$COMMIT_HASH
       - name: Install Okteto CLI
         run: curl https://get.okteto.com -sSfL | sh
       - name: Login into Okteto

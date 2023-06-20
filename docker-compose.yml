@@ -1,6 +1,7 @@
 services:
-  books-reviewer:
-    image: repo2001/ais-j.ferrer-a.arlandis-2023:$COMMIT_HASH
+  books-reviewer-tbd:
+    image: maes95/books-reviewer:${VERSION}
     ports:
-     - 8080:8080
+      - 8080:8080
+
 

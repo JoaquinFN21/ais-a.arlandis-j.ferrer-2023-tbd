@@ -12,5 +12,11 @@ jobs:
       with:
           distribution: 'temurin'
           java-version: '17'
-    - name: Ejecuta todos los test
-      run: mvn test 
+    - name: Ejecuta pruebas unitarias
+      run: mvn test -Dtest=*Unitary*
+    - name: Ejecuta pruebas de integracion
+      run: mvn test -Dtest=*Integration*
+    - name: Ejecuta test Selenium
+      run: mvn test -Dtest=*Selenium*
+    - name: Ejecuta test Rest
+      run: mvn test -Dtest=*Rest*

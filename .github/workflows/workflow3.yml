@@ -13,8 +13,14 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - name: Run tests
-        run: mvn test
+      - name: Ejecuta pruebas unitarias
+        run: mvn test -Dtest=*Unitary*
+      - name: Ejecuta pruebas de integracion
+        run: mvn test -Dtest=*Integration*
+      - name: Ejecuta test Selenium
+        run: mvn test -Dtest=*Selenium*
+      - name: Ejecuta test Rest
+        run: mvn test -Dtest=*Rest*
       - name: Generate Docker image
         run: mvn spring-boot:build-image -DskipTests -Dspring-boot.build-image.imageName=${{ secrets.DOCKERHUB_USERNAME }}/books-reviewer:${{ github.sha }}
       - name: Login to DockerHub

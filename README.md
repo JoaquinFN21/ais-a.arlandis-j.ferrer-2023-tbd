@@ -43,6 +43,8 @@ Una vez creados los workflows y funcionando estos, pasamos a crear la nueva func
 12º Creamos la rama release-1.1 con el comando $ git checkout -b release-1.1
 
 13º Subimos la nueva rama al repositorio online con el comando $ git push origin release-1.1. Al subir la rama, se trata de un push sobre una rama release, por lo que se ejecuta el [Workflow3](https://github.com/JoaquinFN21/ais-a.arlandis-j.ferrer-2023-tbd/actions/runs/5336361627) lo cual genera una [Imagen en DockerHub](https://hub.docker.com/layers/repo2001/books-reviewer/b29015ddef9b15b47ce9e270c752b1b168f58d07/images/sha256-2b3c261f24b69d064e7b0bd45ff23aeaf3636de3f5fb36041e6ee36ecd17b1f4?context=explore) y despliega la aplicacion automaticamente en Okteto.
+![Okteto](https://github.com/JoaquinFN21/ais-a.arlandis-j.ferrer-2023-tbd/assets/120312771/dd330459-c0db-4847-8217-a7c04a787a76)
+![AppLibro](https://github.com/JoaquinFN21/ais-a.arlandis-j.ferrer-2023-tbd/assets/120312771/4120619c-85a1-4baa-8c3b-a3baf816fec1)
 
 ## Workflow de Nightly
 Este workflow se ejecuta automaticamente todas las noches ejecutando todos los Test y creando una imagen en DockerHub cuyo tag es la fecha en la que se ejecuta dicho workflow.

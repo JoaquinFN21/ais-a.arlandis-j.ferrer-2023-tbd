@@ -20,8 +20,13 @@ public class BookDetail extends Book{
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        if (description.length() > 950) {
+            this.description = description.substring(0, 950) + "...";
+        } else {
+            this.description = description;
+        }
     }
+
 
     public String getImageUrl() {
         return imageUrl;

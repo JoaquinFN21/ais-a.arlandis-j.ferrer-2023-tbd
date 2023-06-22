@@ -48,5 +48,5 @@ Una vez creados los workflows y funcionando estos, pasamos a crear la nueva func
 
 ## Workflow de Nightly
 Este workflow se ejecuta automaticamente todas las noches ejecutando todos los Test y creando una imagen en DockerHub cuyo tag es la fecha en la que se ejecuta dicho workflow.
-[Ejecucion Workflow]().
-[Imagen generada]().
+[Ejecucion Workflow](https://github.com/JoaquinFN21/ais-a.arlandis-j.ferrer-2023-tbd/actions/runs/5340575016).
+[Imagen generada](https://hub.docker.com/layers/repo2001/books-reviewer/dev-20230622.012523/images/sha256-2b3c261f24b69d064e7b0bd45ff23aeaf3636de3f5fb36041e6ee36ecd17b1f4?context=explore).
